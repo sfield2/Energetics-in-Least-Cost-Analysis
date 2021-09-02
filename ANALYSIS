@@ -33,16 +33,16 @@ master.projection <- sp::CRS('+proj=utm +datum=NAD83 +zone=13')
 ###########################################################
 # Import data and 
 # aggregate DEM to reduce computational costs 
-origins <- readOGR(dsn="./DATA", layer="origin locations")
-sites <- readOGR(dsn="./DATA",layer="Sites")
+origins <- readOGR(dsn="./DATA/origin locations", layer="origin locations")
+sites <- readOGR(dsn="./DATA/Sites",layer="Sites")
 destination1 <- subset(sites,Name == "Corridor 2 destination")
 destination2 <- subset(sites,Name == "Corridor 3 destination")
 
-dem <- raster('./DATA/dem_1.tif',na.rm=T)
-dem.aggregate <- 5
-dem <- aggregate(dem, fact=dem.aggregate, fun=mean)
+dem <- raster('./DATA/DEM/DEM_corridor1.tif',na.rm=T)
 
-
+# data downloaded through repository has already been aggregated via following steps 
+#dem.aggregate <- 5
+#dem <- aggregate(dem, fact=dem.aggregate, fun=mean)
 
 ###########################################################
 ####### STEP #2.1: CREATE CONDUCTANCE SURFACES  & #########
@@ -73,8 +73,6 @@ campbell_cs <- leastcostpath::create_slope_cs(dem = dem, cost_function = "campbe
 #### Create energy-based transition layers 
 herzog_cs <- leastcostpath::create_slope_cs(dem = dem, cost_function = "herzog", neighbours = neigh)
 ls_cs <- leastcostpath::create_slope_cs(dem = dem, cost_function = "llobera-sluckin", neighbours = neigh)
-
-
 
 ###########################################################
 ########### STEP #2.2: CREATE PANDOLF SURFACE #############
@@ -363,8 +361,8 @@ waypoint2 <- subset(sites,Name == "Corridor 3 waypoint 2")
 
 
 # Import the raster surface that represents conductive features 
-conduit <- raster('./DATA/dem_3_conduit.tif',na.rm=T)
-dem <- raster('./DATA/dem_3.tif',na.rm=T)
+conduit <- raster('./DATA/DEM/DEM_corridor3_conduit.tif',na.rm=T)
+dem <- raster('./DATA/DEM/DEM_corridor3.tif',na.rm=T)
 
 # Make sure the raster representing the conduit is the same resolution as the DEM 
 # you are using to create the conductance surface 
@@ -412,12 +410,11 @@ t_lcp_ex <- leastcostpath::create_lcp(cost_surface = tobler_cs_withconduit, orig
 ################# ENERGY CONSIDERATIONS ########################################
 ################################################################################
 # Import data and create conductance surfaces
-# NOte: THe example below demonstrates the method with multiple time- and 
+# Note: The example below demonstrates the method with multiple time- and 
 # energy- based LCPs.
-origins <- readOGR(dsn="./DATA", layer="origin locations")
-sites <- readOGR(dsn="./DATA",layer="Sites")
 destination <- subset(sites,Name == "Corridor 2 destination")
 origin <- origins[1,]
+dem <- raster('./DATA/DEM/DEM_corridor1.tif',na.rm=T)
 
 # Create an accumulated cost surfaces for each time-based conductance surface 
 # that you have created. An accumulated cost surface represents the cumulative 
