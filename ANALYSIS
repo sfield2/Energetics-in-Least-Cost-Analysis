@@ -347,7 +347,7 @@ t_wp3_d_lcp <- leastcostpath::create_lcp(cost_surface = tobler_cs, origin = wayp
 
 
 ################################################################################
-################# STEP 5: INTEGRATING ROADS AS CONDUITS ########################
+################# STEP 4: INTEGRATING ROADS AS CONDUITS ########################
 ################################################################################
 # Parts of the built environment, such as roads, can also be integrated into the 
 # conductance surfaces to simulate increased ease of travel over or across those 
@@ -406,7 +406,7 @@ t_lcp_ex <- leastcostpath::create_lcp(cost_surface = tobler_cs_withconduit, orig
 
 
 ################################################################################
-################# STEP 6: MODELING LCPs WITH ALTERNATING TIME OR ###############
+################# STEP 5: MODELING LCPs WITH ALTERNATING TIME OR ###############
 ################# ENERGY CONSIDERATIONS ########################################
 ################################################################################
 # Import data and create conductance surfaces
