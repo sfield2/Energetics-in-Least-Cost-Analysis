@@ -7,7 +7,6 @@ as "DEM_corridor3_conduit" is not publicly available, given it includes sensitiv
 
 Locaiton data:
 Random site locations used in the reserach by Field et al. 2021 are included in the compressed file 
-entitled "origin locations". The site data include a single shapefile that contains ten site locations, which 
+entitled "origin locations". The site data include a single shapefile that contains ten random site locations, which 
 are referenced in the ANALYSIS R-script as "origin locations". Additional site information, including the data
-referenced in the ANALYSIS R-script as "sites", "Corridor 2 destination", "Corridor 3 origin", "Corridor 3 destination", "Corridor 3 waypoint 1", 
-"Corridor 3 waypoint 2" are not publicly available, given they include sensitive information.  
+referenced in the ANALYSIS R-script as "sites" are not publicly available, given they include sensitive information.  
