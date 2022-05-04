@@ -194,7 +194,7 @@ for(i in 1:n){
   origin <- origins[i,]
   proj4string(origin) <- sp::CRS("+proj=utm +datum=NAD83 +zone=13")
   # Calculate least cost paths 
-  # Discuss parameters...
+  
   t_lcp <- leastcostpath::create_lcp(cost_surface = tobler_cs, origin = origin, destination = destination1, directional = T,cost_distance=T)
   ic_lcp <- leastcostpath::create_lcp(cost_surface = ic_off_m_cs, origin = origin, destination = destination1, directional = T,cost_distance=T)
   c_lcp <- leastcostpath::create_lcp(cost_surface = campbell_cs, origin = origin, destination = destination1, directional = T,cost_distance=T)
