@@ -6,7 +6,7 @@ This directory contains code written in R for all analyses, and a directory for 
  
 ## Data 
 
-Portions of the data used in this research is provided in folder entitled "DATA". Sensitive site and road location is not included. 
+Portions of the data used in this research is provided in folder entitled "DATA". Sensitive site and road location data is not included. 
 
 ## Analysis
 
