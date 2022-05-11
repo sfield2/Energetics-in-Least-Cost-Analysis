@@ -9,4 +9,5 @@ Locaiton data:
 Random site locations used in the reserach by Field et al. 2021 are included in the compressed file 
 entitled "origin locations". The site data include a single shapefile that contains ten random site locations, which 
 are referenced in the ANALYSIS R-script as "origin locations". Additional site information, including the data
-referenced in the ANALYSIS R-script as "sites" are not publicly available, given they include sensitive information.  
+referenced in the ANALYSIS R-script as "sites" are not publicly available, given they include sensitive information. These data 
+can be accounted for by creating a singe point shapefile as a possibe end point for the paths.
