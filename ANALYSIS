@@ -34,7 +34,8 @@ master.projection <- sp::CRS('+proj=utm +datum=NAD83 +zone=13')
 # Import data and 
 # aggregate DEM to reduce computational costs 
 origins <- readOGR(dsn="./DATA/origin locations", layer="origin locations")
-sites <- readOGR(dsn="./DATA/Sites",layer="Sites")
+# NOTE: Insert your own destinations and waypoints for each corridor
+sites <- readOGR(dsn="./DATA/Sites",layer="USER_SPECIFIC_SITE_DATA")
 destination1 <- subset(sites,Name == "Corridor 2 destination")
 destination2 <- subset(sites,Name == "Corridor 3 destination")
 
