@@ -2,7 +2,7 @@
 
 This directory contains code written in R for all analyses, and a directory for all data used, in:
 
- S. Field, D. Glowacki, L. Gettler. 2021. The Importance of Energetics in Archaeological Least Cost Analysis. Submitted for review at the Journal of Archaeological Method and Theory
+ S. Field, D. Glowacki, L. Gettler. 2022. The Importance of Energetics in Archaeological Least Cost Analysis. Journal of Archaeological Method and Theory, DOI: https://doi.org/10.1007/s10816-022-09564-8
  
 ## Data 
 
