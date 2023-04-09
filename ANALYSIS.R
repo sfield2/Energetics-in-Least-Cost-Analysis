@@ -20,7 +20,6 @@ library(magrittr)
 # set working directory and set master projection if re-projecting
 #setwd()
 
-setwd("C:/Users/seanp/Documents/R/ENERGETICS IN LEAST COST/GITHUB")
 master.projection <- sp::CRS('+proj=utm +datum=NAD83 +zone=13')
 
 
