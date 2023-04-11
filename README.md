@@ -10,6 +10,6 @@ Portions of the data used in this research is provided in folder entitled "DATA"
 
 ## Analysis
 
-Script used for analysis is an R script, entitled "ANALYSIS", contains all necessary commands for the replication of our analyses
+Script used for analysis is an R script, entitled "ANALYSIS", that contains all necessary commands for the replication of our analyses
 
-If you have questions, email Sean Field (sfield2@nd.edu)
+If you have questions, email Sean Field (sfield2@nd.edu).
