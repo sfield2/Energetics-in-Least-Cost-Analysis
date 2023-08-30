@@ -12,4 +12,4 @@ Portions of the data used in this research is provided in folder entitled "DATA"
 
 Script used for analysis is an R script, entitled "ANALYSIS.R", that contains all necessary commands for the replication of our analyses
 
-If you have questions, email Sean Field (sfield2@nd.edu).
+If you have questions, email Sean Field (Sean.Field@uwyo.edu).
